@@ -88,6 +88,7 @@ class Renderer(Component):
                 self.m_SortingLayerID = reader.read_u_int()
 
             # SInt16 m_SortingLayer 5.6 and up
+            self.m_SortingLayer = reader.read_short() # Need version check
             self.m_SortingOrder = reader.read_short()
             reader.align_stream()
 
